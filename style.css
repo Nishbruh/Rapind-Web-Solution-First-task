@@ -77,7 +77,7 @@
 
 /* The search icon */
 .header .container #rightH #upperH #search-icon {
-    background-image: url(./images/icon.png);
+    background-image: url(./images/ICONS/icon.png);
     background-position: 5px 5px;
     background-repeat: no-repeat;
     width: 35px;
@@ -117,7 +117,12 @@
 
 /* Main Navigation Styling */
 .Main-Nav {
-    background-image: linear-gradient(90deg, #004a7f 0%, #006ba6 50%, #004a7f 100%);
+
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    /* left: 50%;
+    top: 0; */
+    width: 100%;
+    /* transform: translate(-50%, 0%); */
 }
 
 /* ul of main navigation bar */
@@ -129,17 +134,86 @@
 
 /* list items of navigation bar */
 .Main-Nav ul li {
-    width: 1023px;
+    /* display: inline; */
     font-size: 17px;
     line-height: 40px;
     color: #ffffff;
     font-family: "Open Sans";
     font-weight: 700;
     text-align: center;
-    padding: 5px 0px;
+    padding: 5px 30px;
 }
 
 /* current position */
 .Main-Nav ul .current {
     background-color: #55ba47;
+}
+
+.upperbody {
+    position: relative;
+    background-image: linear-gradient(-90deg, #003a6c 0%, #007bb9 51%, #003a6c 100%);
+}
+
+.upperbody .wrapper {
+    margin-top: 20px;
+    display: flex;
+    border: red solid 2px transparent;
+}
+
+.upperbody .wrapper #sidenav {
+    width: 30%;
+    border: #1eff00 2px solid transparent;
+}
+
+.upperbody .wrapper #sidenav ul {
+    list-style: none;
+    width: 100%;
+}
+
+.upperbody .wrapper #sidenav ul li {
+    font-size: 18px;
+    display: flex;
+    line-height: 25px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    /* border-image: linear-gradient(to left, rgba(0, 0, 0, 0.4), #004581);
+    border-image-slice: 1; */
+    box-shadow: 1.5px 1.5px 1px 1px rgba(0, 153, 255, 0.2);
+}
+
+.upperbody .wrapper #sidenav ul li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.upperbody .wrapper #imageholder {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    width: 66%;
+    border: rgb(0, 217, 255) 2px solid transparent;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.upperbody .wrapper #imageholder .img {
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.upperbody .wrapper #imageholder .c {
+    margin-bottom: 10px;
+}
+
+.upperbody #watermark {
+    position: absolute;
+    background: url(./images/Vector\ Smart\ Object\(watermark\).png) no-repeat;
+    width: 35%;
+    height: 500px;
+    bottom: 0px;
+    right: 0px;
+    border: red 5px solid transparent;
 }
