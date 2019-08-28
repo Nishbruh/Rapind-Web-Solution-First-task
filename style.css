@@ -24,6 +24,7 @@
 .header {
 
     height: 20vh;
+    margin-bottom: 10px;
     /* overflow: hidden; */
 }
 
@@ -112,4 +113,33 @@
     font-family: "Open Sans";
     font-weight: 300;
     text-align: right;
+}
+
+/* Main Navigation Styling */
+.Main-Nav {
+    background-image: linear-gradient(90deg, #004a7f 0%, #006ba6 50%, #004a7f 100%);
+}
+
+/* ul of main navigation bar */
+.Main-Nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* list items of navigation bar */
+.Main-Nav ul li {
+    width: 1023px;
+    font-size: 17px;
+    line-height: 40px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-weight: 700;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+/* current position */
+.Main-Nav ul .current {
+    background-color: #55ba47;
 }
