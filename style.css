@@ -1,0 +1,115 @@
+/* Clearing all defaults */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.container {
+
+    width: 80%;
+    margin: auto;
+
+}
+
+/* Header-container styling */
+.container .header-container {
+    display: flex;
+    justify-content: space-between;
+    height: 19.5vh;
+}
+
+/* Header styling */
+.header {
+
+    height: 20vh;
+    /* overflow: hidden; */
+}
+
+/* header left section */
+.header .container #LeftH {
+    display: flex;
+    align-items: center;
+}
+
+/* logo-section */
+.header .container #logo {
+    height: 71px;
+    width: 313px;
+    background: url(./images/Vector\ Smart\ Object-pdf\ \(1\).jpg);
+    background-size: cover;
+}
+
+/* header right section */
+.header .container #rightH {
+
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+/* the container that holds the upperH */
+.header .container #rightH #upperH-holder {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* upper-section of header-right */
+.header .container #rightH #upperH {
+    width: 242px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+/* the ul in header */
+.header .container #rightH #upperH #search {
+    list-style: none;
+    width: 207px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+/* The search icon */
+.header .container #rightH #upperH #search-icon {
+    background-image: url(./images/icon.png);
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    background-color: #55ba47;
+}
+
+/* Header navigation list */
+.header .container #rightH #upperH #search li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 207px;
+    height: 13px;
+    font-size: 13px;
+    color: #595959;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* the first item of the list */
+.header .container #rightH #upperH #search #a {
+    border-right: #595959 solid;
+}
+
+/* Lower-right item of header */
+.header .container #rightH #lowerH {
+    /* width: 421px;
+    height: 56px; */
+    font-size: 29px;
+    color: #55ba47;
+    font-family: "Open Sans";
+    font-weight: 300;
+    text-align: right;
+}
