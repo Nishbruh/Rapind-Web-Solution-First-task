@@ -14,8 +14,6 @@
 
 
 
-
-
 /* Container styling */
 .container {
 
@@ -23,9 +21,6 @@
     margin: auto;
 
 }
-
-
-
 
 
 
@@ -96,7 +91,7 @@
 }
 
 /* The search icon */
-.header .container #rightH #upperH #search-icon {
+#search-icon {
     background-image: url(./images/ICONS/icon.png);
     background-position: 5px 5px;
     background-repeat: no-repeat;
@@ -213,6 +208,11 @@
     padding-bottom: 30px;
 }
 
+.upperbody * {
+    position: relative;
+    z-index: 1;
+}
+
 .upperbody .wrapper {
     margin-top: 20px;
     display: flex;
@@ -281,7 +281,6 @@
     bottom: 0px;
     right: 0px;
     border: red 5px solid transparent;
-    z-index: -1;
 }
 
 
@@ -368,8 +367,6 @@
     background-color: #55ba47;
 }
 
-
-
 #i1,
 #i2,
 #i3 {
@@ -405,6 +402,7 @@
     align-items: center;
     font-family: 'open_sansextrabold';
     color: #fff;
+    overflow: hidden;
 }
 
 .mobnav {
@@ -476,9 +474,14 @@
 
 .background {
     height: 450px;
-    position: relative;
+    position: relative !important;
     background-image: linear-gradient(-90deg, #003a6c 0%, #007bb9 51%, #003a6c 100%);
 }
+
+
+
+
+
 
 /* FOOTER */
 #footer {
@@ -563,7 +566,6 @@
     .Main-Nav ul li .upperbody .wrapper,
     .upperbody .wrapper #sidenav,
     .wrapper #sidenav ul,
-    .upperbody #watermark,
     .lowerbody,
     .lowerbody .lowerwrapper,
     .lowerbody .lowerwrapper #left,
@@ -576,6 +578,10 @@
 
     .header .container #LeftH {
         height: 60%;
+    }
+
+    #lowerH p {
+        padding-right: 20px;
     }
 
     #logo .imgg {
@@ -598,8 +604,18 @@
         width: 100%;
     }
 
+    .lowerbodypart {
+        height: 1025px !important;
+        border-radius: 0 0 15% 15% !important;
+    }
 
+    .backgroundpart {
+        height: 1200px !important;
+    }
 
+    #form input {
+        width: 100px;
+    }
 
     .upperbody .wrapper #sidenav {
         width: 200px;
@@ -659,25 +675,55 @@
 
     #footer .footerwrapper {
         margin-top: 20px;
-        margin-left: 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 100% !important;
     }
 
     #footer .footerwrapper p {
         justify-content: left;
         margin-bottom: 5px;
-
+        width: 100%;
+        padding-left: 20px;
     }
 
     #footer .footerwrapper ul {
         display: flex;
         justify-content: left;
         align-items: center;
+        width: 100%;
     }
 
     #footer .footerwrapper .image {
+        position: absolute;
+        right: 10px;
+    }
+
+
+    #footerz .footerwrapper {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100% !important;
+    }
+
+    #footerz .footerwrapper p {
+        justify-content: left !important;
+        margin-bottom: 5px;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    #footerz .footerwrapper ul {
+        display: flex;
+        justify-content: left !important;
+        align-items: center;
+        width: 100%;
+    }
+
+    #footerz .footerwrapper .image {
         position: absolute;
         right: 10px;
     }
@@ -693,6 +739,10 @@
     }
 
 }
+
+
+
+
 
 @media (max-width:320px) {
 
@@ -802,12 +852,12 @@
 
     .lowerbody {
         padding: 0;
-        height: 675px;
+        height: 960px;
         border-radius: 0 0 15% 15%;
     }
 
     .mobnav {
-        display: flex;
+        display: flex !important;
         position: absolute;
         top: 0;
         width: 100%;
@@ -816,6 +866,10 @@
     .mobnav input {
         width: 100%;
         padding: 0px 10px;
+    }
+
+    .lowerbody .lowerwrapper {
+        overflow: hidden;
     }
 
     .lowerbody .lowerwrapper #left,
@@ -833,7 +887,7 @@
     }
 
     .background {
-        height: 900px;
+        height: 1300px;
     }
 
     #footer {
@@ -853,6 +907,7 @@
         position: absolute;
         top: 60%;
         left: 50%;
+        padding-left: 0px;
         transform: translate(-50%, -50%);
         text-align: center;
     }
@@ -905,12 +960,7 @@
 
 
 
-
-
-
 /* 2ND PAGE(IPP NEWS) */
-
-
 
 .lowwrap p,
 li {
@@ -1103,6 +1153,9 @@ hr {
 }
 
 
+
+
+
 @media(max-width:320px) {
 
     .lowerbodypart .lowwrap,
@@ -1123,21 +1176,27 @@ hr {
         flex-direction: column-reverse;
     }
 
+    #footerz {
+        top: 91% !important;
+    }
+
     #footerz .footerwrapper {
         text-align: center;
         justify-content: initial;
     }
 
-    #footerz .footerwrapper img {
-        order: 0;
+    #footerz .footerwrapper .image {
+        position: initial !important;
+        order: 0 !important;
     }
 
     #footerz .footerwrapper p {
-        order: 1;
+        order: 1 !important;
+        padding: 0px 20px !important;
     }
 
     #footerz .footerwrapper ul {
-        order: 2;
+        order: 2 !important;
     }
 
     #footerz .footerwrapper ul li {
@@ -1152,11 +1211,18 @@ hr {
     }
 
 
+    .noneed {
+        display: none;
+    }
 
 
+    #three #form {
+        margin-top: 20px;
+    }
 
     .backgroundpart {
-        height: 2175px;
+        height: 2275px !important;
+        overflow: hidden;
     }
 
     #side {
@@ -1166,8 +1232,8 @@ hr {
 
 
     .lowerbodypart {
-        height: 1900px;
-        border-radius: 0 0 10% 10%;
+        height: 2055px !important;
+        border-radius: 0 0 10% 10% !important;
     }
 
     .title .container #path {
